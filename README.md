@@ -1,2 +1,2 @@
 # Fishes2Riches
-Kaggle fish ID competition
+Kaggle fish ID competition stable
