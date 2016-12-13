@@ -32,6 +32,7 @@ class RectangleDrawer(Tk):
         Tk.__init__(self)     
         self.x = self.y = 0 #intialize the click position
         self.boxDim = 100 #intialize the default size of the box
+        self.fileNameIndex = 0
         self.currentFileIndex = 0
         self.path = fileList[self.currentFileIndex]
         
@@ -76,13 +77,15 @@ class RectangleDrawer(Tk):
         
     def on_s_press(self, event):
         
+        self.fileNameIndex += 1
         dst = self.subimage(self.path, self.x-self.boxDim/2, self.y-self.boxDim/2, self.x+self.boxDim/2, self.y+self.boxDim/2)
-        imageName = savingDir+ "\\" + self.path[0:-4]+ "cutout.jpg"
+        imageName = savingDir+ "\\" + self.path[0:-4]+ "cutout" +str(self.fileNameIndex)+".jpg"
         dst.save(imageName)
         print "Image saved."
         
     def previous_image(self,event):
         if self.currentFileIndex>0:
+            self.fileNameIndex = 1
             self.currentFileIndex-=1
             self.canvas.delete("ALL")
             self.path = fileList[self.currentFileIndex]
@@ -94,6 +97,7 @@ class RectangleDrawer(Tk):
             
     def next_image(self,event):
         if self.currentFileIndex<numFiles:
+            self.fileNameIndex = 1
             self.currentFileIndex+=1
             self.canvas.delete("ALL")
             self.path = fileList[self.currentFileIndex]
