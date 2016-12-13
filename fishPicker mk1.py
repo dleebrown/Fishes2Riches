@@ -17,21 +17,14 @@ class GetInput(Tk):
         
         e.focus_set()
         
-        def thisFunctionalityShouldAlreadyBeImplemented(self,event):
-            self.workingDir = e.get()
-            self.destroy()            
-        
         def callback():
             self.workingDir = e.get()
             self.destroy()
         
-        e.bind("<Return>",self.thisFunctionalityShouldAlreadyBeImplemented)
+        
         b = Button(self, text = "Ok", width = 10, command=callback)
         b.pack()
-        
-        
-                
-        
+                                        
             
 class RectangleDrawer(Tk):
      
@@ -56,7 +49,7 @@ class RectangleDrawer(Tk):
         self.canvas.bind("s", self.on_s_press) #saving subimage on pressing s
         self.canvas.bind("1", self.previous_image) #move to previous image on pressing 1
         self.canvas.bind("2", self.next_image) #move to next image on pressing 2
-        self.canvas.bind("g", self.goto_image) #move to a chosen image on pressing g
+        #self.canvas.bind("g", self.goto_image) #move to a chosen image on pressing g
         
        
         self.background= ImageTk.PhotoImage(file=self.path)
@@ -110,13 +103,13 @@ class RectangleDrawer(Tk):
         else:
             tkMessageBox.showerror("Error","Already at the last image.")       
     
-    def goto_image(self,event):
+    #def goto_image(self,event):
         
-        imageNum = GetInput()
-        imageNum.mainloop()
+        #imageNum = GetInput()
+        #imageNum.mainloop()
         
-        self.currentFileIndex = int(imageNum.workingDir)
-        print fileList[self.currentFileIndex]
+        #self.currentFileIndex = int(imageNum.workingDir)
+        #print fileList[self.currentFileIndex]
         #self.canvas.delete("ALL")
         #self.path = fileList[self.currentFileIndex]
         #self.background= ImageTk.PhotoImage(file=self.path)
