@@ -11,7 +11,7 @@ class GetInput(Tk):
         self.workingDir = ""
         
         Label(self, text=displayText).pack()
-        
+
         e = Entry(self)
         e.pack()
         
