@@ -85,7 +85,7 @@ class RectangleDrawer(Tk):
         
     def previous_image(self,event):
         if self.currentFileIndex>0:
-            self.fileNameIndex = 1
+            self.fileNameIndex = 0
             self.currentFileIndex-=1
             self.canvas.delete("ALL")
             self.path = fileList[self.currentFileIndex]
@@ -97,7 +97,7 @@ class RectangleDrawer(Tk):
             
     def next_image(self,event):
         if self.currentFileIndex<numFiles:
-            self.fileNameIndex = 1
+            self.fileNameIndex = 0
             self.currentFileIndex+=1
             self.canvas.delete("ALL")
             self.path = fileList[self.currentFileIndex]
