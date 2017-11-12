@@ -1,2 +1,2 @@
 # Fishes2Riches
-Kaggle fish ID competition
+Code written as part of the Kaggle Nature Conservancies Fisheries Monitoring (https://www.kaggle.com/c/the-nature-conservancy-fisheries-monitoring). 
