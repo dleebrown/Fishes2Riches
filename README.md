@@ -15,7 +15,7 @@ The main challenges of this competition were:
 3. Problem complexity. Especially for a first Kaggle competition, this challenge was pretty difficult. The images were low-resolution and noisy, the fish could be photographed from any angle (and were occasionally obscured or missing pieces), and the limited training set size necessitated some creative problem-solving. Our hardware limitations also forced us to think carefully about our implementations and eliminate code bottlenecks. 
 
 # Authors
-Donald Lee-Brown ([@dleebrown](https://github.com/dleebrown)), Michael Reeks ([@mreeks91](https://github.com/mreeks91))
+Donald Lee-Brown ([@dleebrown](https://github.com/dleebrown)), Michael Reeks ([@mreeks91](https://github.com/mreeks91)).
 
 
 
