@@ -1,7 +1,4 @@
 """
-Fish Monger v0.1 "sladki payk, domashnaya robota" 50% off BOGO $20 MIR cashback bonus bucks"
-
-see fishMonger_readme
 """
 
 import tensorflow as tf
